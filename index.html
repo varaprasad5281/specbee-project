@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speaker Slider</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="speaker-slider">
+      <h2 class="speaker-slider__title">
+        View our Featured Speakers for the Event
+      </h2>
+      <p class="speaker-slider__description">
+        Speakers are core contributors and industry thought leaders working at
+        companies that push for innovation.
+      </p>
+
+      <!-- Speaker Cards Slider -->
+      <div class="speaker-slider__container">
+        <div class="speaker-slider__card" data-speaker="1">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1689530775582-83b8abdb5020?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww"
+            alt="John Doe"
+            class="speaker-slider__image"
+          />
+          <h3 class="speaker-slider__name">John Doe</h3>
+          <p class="speaker-slider__role">Chief Marketing Officer</p>
+          <p class="speaker-slider__company">Acme Corp</p>
+        </div>
+
+        <div class="speaker-slider__card" data-speaker="2">
+          <img
+            src="https://media.istockphoto.com/id/673413724/photo/business-life.webp?a=1&b=1&s=612x612&w=0&k=20&c=WX_8LiXhhOZT-sCWE0MEbqxu6GNuBT2cGxHrwiAyAkM="
+            alt="Jane Smith"
+            class="speaker-slider__image"
+          />
+          <h3 class="speaker-slider__name">Jane Smith</h3>
+          <p class="speaker-slider__role">VP of Product</p>
+          <p class="speaker-slider__company">Tech Innovations</p>
+        </div>
+
+        <div class="speaker-slider__card" data-speaker="3">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1671656349322-41de944d259b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8cmFuZG9tJTIwcGVyc29ufGVufDB8fDB8fHww"
+            alt="Alex Brown"
+            class="speaker-slider__image"
+          />
+          <h3 class="speaker-slider__name">Alex Brown</h3>
+          <p class="speaker-slider__role">Lead Engineer</p>
+          <p class="speaker-slider__company">BuildNow</p>
+        </div>
+
+        <div class="speaker-slider__card" data-speaker="4">
+          <img
+            src="https://plus.unsplash.com/premium_photo-1669688174637-92ff26cc0a9b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHJhbmRvbSUyMHBlcnNvbnxlbnwwfHwwfHx8MA=="
+            alt="Emily Davis"
+            class="speaker-slider__image"
+          />
+          <h3 class="speaker-slider__name">Emily Davis</h3>
+          <p class="speaker-slider__role">CEO & Founder</p>
+          <p class="speaker-slider__company">FutureWorks</p>
+        </div>
+      </div>
+
+      <!-- Speaker Details Popover -->
+      <div class="speaker-slider__popover" id="speaker-popover">
+        <button class="speaker-slider__close" id="popover-close">
+          &times;
+        </button>
+        <div class="speaker-slider__popover-content">
+          <img src="" alt="" class="popover__image" id="popover-image" />
+          <h3 class="popover__name" id="popover-name"></h3>
+          <p class="popover__role" id="popover-role"></p>
+          <p class="popover__company" id="popover-company"></p>
+          <p class="popover__details" id="popover-details">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum sit
+            unde nihil dolorum nisi facilis vel vero dolor, laborum, sunt
+            debitis similique sint.
+          </p>
+        </div>
+      </div>
+
+      <button class="btn btn-primary">See the Program</button>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

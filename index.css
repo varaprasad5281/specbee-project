@@ -1,0 +1,187 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.speaker-slider {
+  width: 90%;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.speaker-slider__title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.speaker-slider__description {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.speaker-slider__container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 20px;
+}
+
+.speaker-slider__card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 15px;
+  padding: 20px;
+  min-width: 200px;
+  max-width: 240px;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease;
+}
+
+.speaker-slider__card:hover {
+  transform: translateY(-5px);
+}
+
+.speaker-slider__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.speaker-slider__name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.speaker-slider__role,
+.speaker-slider__company {
+  font-size: 14px;
+  color: #888;
+}
+
+.btn-primary {
+  background-color: #1d4ed8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+/* Popover styles */
+.speaker-slider__popover {
+  display: none;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  position: absolute;
+  top: 150px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 500px;
+  max-width: 90%;
+}
+
+.speaker-slider__popover-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popover__image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.popover__name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.popover__role,
+.popover__company,
+.popover__details {
+  font-size: 14px;
+  color: #888;
+}
+
+.speaker-slider__close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .speaker-slider__container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .speaker-slider__card {
+    margin-bottom: 20px;
+    min-width: 250px;
+    max-width: 300px;
+  }
+
+  .speaker-slider__popover {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .speaker-slider__card {
+    margin-bottom: 15px;
+    min-width: 220px;
+    padding: 15px;
+  }
+
+  .speaker-slider__title {
+    font-size: 20px;
+  }
+
+  .speaker-slider__description {
+    font-size: 14px;
+  }
+
+  .speaker-slider__popover {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .popover__image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .popover__name {
+    font-size: 16px;
+  }
+
+  .popover__role,
+  .popover__company,
+  .popover__details {
+    font-size: 12px;
+  }
+}
